@@ -11,11 +11,6 @@ main {
     color: yellow;
 }
 
-p {
-    color: #ff6b01;
-    font-size: 1em;
-}
-
 textarea {
     width: 30%;
     height: 80%;
@@ -31,4 +26,6 @@ textarea {
 .area-data {
     margin-top: 0.1em;
     margin-bottom: 0.1em;
+    color: #ff6b01;
+    font-size: 1em;
 }
