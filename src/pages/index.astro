@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
 import TextAreaWithLength from '../components/TextAreaWithLength.jsx';
 ---
 
 <Layout title="Text utils">
-	<!-- <header> -->
+	<Header client:load/>
 	<main>		
 		<TextAreaWithLength client:load/>
 	</main>
