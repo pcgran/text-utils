@@ -14,9 +14,11 @@ main {
 textarea {
     width: 30%;
     height: 80%;
-    resize: none;
-    background-color: black;
+    resize: none;    
     color: rgb(182, 182, 182);
+    font-family: 'Courier New', Courier, monospace;
+    border-color: #ff6b01;
+    background-color: #181d29;
 }
 
 .area-block {
@@ -26,6 +28,11 @@ textarea {
 .area-data {
     margin-top: 0.1em;
     margin-bottom: 0.1em;
+    margin-right: 1em;
     color: #ff6b01;
     font-size: 1em;
+}
+
+.data-container {
+    display: flex;
 }
