@@ -19,13 +19,15 @@ main {
 }
 
 textarea {
-  width: 100%;
+  width: calc(100% - 2em);
   height: 80%;
   resize: none;
   color: rgb(182, 182, 182);
   font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
   border-color: white;
   background-color: #181d29;
+  padding: 1em;
 }
 
 .area-block {
