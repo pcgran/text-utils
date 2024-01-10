@@ -8,8 +8,8 @@ const calculateSencences = (text) => {
 const DataContainer = ({ text }) => {
   return (
     <div className="data-container">
-      <div className="area-data">Length: <b>{text.length}</b></div>
-      <div className="area-data">Sentences: <b>{calculateSencences(text)}</b></div>
+      <div className="area-data">Length: <span className="data-span">{text.length}</span></div>
+      <div className="area-data">Sentences: <span className="data-span">{calculateSencences(text)}</span></div>
     </div>
   );
 };
