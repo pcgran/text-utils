@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="separator">
         <hr />
       </div>
-      <div className="footer-text">made by <a href="https://github.com/pcgran">@pcgran</a></div>
+      <div className="footer-text dark">made by <a id="github-link" href="https://github.com/pcgran">@pcgran</a></div>
     </div>
   );
 };

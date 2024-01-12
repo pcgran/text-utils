@@ -16,6 +16,7 @@ const TextAreaWithLength = () => {
         value={text}
         onChange={handleTextChange}
         placeholder="Type something..."
+        className="dark"
       />
       <DataContainer text={text} />
     </div>

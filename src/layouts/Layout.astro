@@ -12,11 +12,13 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script src="https://kit.fontawesome.com/e9f22b8edb.js" crossorigin="anonymous"></script>
+		<script src="../scripts/theme-switch.js"></script>		
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="dark">
 		<slot />
 	</body>
 </html>

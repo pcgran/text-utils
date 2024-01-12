@@ -1,6 +1,5 @@
 html {
   font-family: IBM Plex Mono, monospace;
-  background: #212737;
 }
 
 body {
@@ -10,6 +9,15 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background: #212737;
+}
+
+body.dark {
+  background: #212737;
+}
+
+body.light {
+  background: #f5f5f5;
 }
 
 main {
@@ -22,12 +30,21 @@ textarea {
   width: calc(100% - 2em);
   height: 80%;
   resize: none;
-  color: rgb(182, 182, 182);
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
+  padding: 1em;
+}
+
+textarea.dark {
+  color: rgb(182, 182, 182);
   border-color: white;
   background-color: #181d29;
-  padding: 1em;
+}
+
+textarea.light {
+  color: #363636;
+  border-color: black;
+  background-color: #c8c8c8;
 }
 
 .area-block {
@@ -53,11 +70,53 @@ textarea {
   margin: auto;
   padding-top: 1em;
   padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 1.6em auto;
+  justify-content: space-between;
 }
 
 .site-title {
   font-size: 1.5em;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.site-title.dark {
   color: white;
+}
+
+.site-title.light {
+  color: black;
+}
+
+#switch-theme-container {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.header-separator {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+#switch {
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#switch.dark {
+  color: white;
+}
+
+#switch.light {
+  color: black;
+}
+
+
+#switch:hover {
+  color: #ff6b01;
 }
 
 hr {
@@ -82,17 +141,28 @@ hr {
   padding-bottom: 1em;
 }
 
-.footer-text {
+.footer-text.dark {
   color: white;
 }
 
-.footer-text a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.footer-text.light {
+  color: black;
 }
 
-a:hover {
-    color: #ff6b01;
-  }
+.footer-text a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-text.dark a {
+  color: white;
+}
+
+.footer-text.light a {
+  color: black;
+}
+
+#github-link:hover {
+  color: #ff6b01;
+}
