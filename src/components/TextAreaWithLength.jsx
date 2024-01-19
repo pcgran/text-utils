@@ -1,5 +1,6 @@
 import { useState } from "react";
-import DataContainer from './DataContainer';
+import DataContainer from "./DataContainer";
+import OperationApplier from "./OperationApplier";
 import "../styles/App.css";
 
 const TextAreaWithLength = () => {
@@ -8,6 +9,11 @@ const TextAreaWithLength = () => {
   const handleTextChange = (event) => {
     const newText = event.target.value;
     setText(newText);
+  };
+
+  const handleButtonClick = () => {
+    const uppercaseText = text.toUpperCase();
+    setText(uppercaseText);
   };
 
   return (
@@ -19,6 +25,7 @@ const TextAreaWithLength = () => {
         className="dark"
       />
       <DataContainer text={text} />
+      <OperationApplier handleButtonClick={handleButtonClick} />
     </div>
   );
 };
