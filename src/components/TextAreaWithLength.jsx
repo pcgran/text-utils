@@ -5,6 +5,11 @@ import "../styles/App.css";
 
 const TextAreaWithLength = () => {
   const [text, setText] = useState("");
+  const [selectedValue, setSelectedValue] = useState('select-operation');
+
+  const handleValueChange = (value) => {
+    setSelectedValue(value);
+  };
 
   const handleTextChange = (event) => {
     const newText = event.target.value;
@@ -12,8 +17,17 @@ const TextAreaWithLength = () => {
   };
 
   const handleButtonClick = () => {
-    const uppercaseText = text.toUpperCase();
-    setText(uppercaseText);
+    if (selectedValue === "select-operation") return;
+    if (selectedValue === "uppercase") {
+      const uppercaseText = text.toUpperCase();
+      setText(uppercaseText);
+      return;
+    }
+    if (selectedValue === "lowercase") {
+      const lowercaseText = text.toLowerCase();
+      setText(lowercaseText);
+      return;
+    }
   };
 
   return (
@@ -25,7 +39,7 @@ const TextAreaWithLength = () => {
         className="dark"
       />
       <DataContainer text={text} />
-      <OperationApplier handleButtonClick={handleButtonClick} />
+      <OperationApplier handleButtonClick={handleButtonClick} selectedValue={selectedValue} onValueChange={handleValueChange}/>
     </div>
   );
 };
