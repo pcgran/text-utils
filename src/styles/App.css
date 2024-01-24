@@ -27,8 +27,9 @@ main {
 }
 
 textarea {
-  width: calc(100% - 2em);
-  height: 80%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   resize: none;
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
@@ -63,6 +64,8 @@ textarea.light {
 
 .data-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-container {
@@ -211,4 +214,28 @@ hr {
 
 #apply-operation.light {
   border: black solid 1px;
+}
+
+#copy-text {
+  font-size: 1em;
+  color: #ff6b01;
+  cursor: pointer;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em; 
+}
+
+#copy-text.dark {
+  background-color: #181d29;
+  border: #b6b6b6 solid 1px;
+}
+
+#copy-text.light {
+  border: black solid 1px;
+}
+
+#data-text {
+  display: flex;
 }
