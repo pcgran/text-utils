@@ -37,6 +37,7 @@ const TextAreaWithLength = () => {
         onChange={handleTextChange}
         placeholder="Type something..."
         className="dark"
+        spellcheck="false"
       />
       <DataContainer text={text} />
       <OperationApplier handleButtonClick={handleButtonClick} selectedValue={selectedValue} onValueChange={handleValueChange}/>

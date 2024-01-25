@@ -7,8 +7,9 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background: #212737;
 }
 
@@ -21,9 +22,8 @@ body.light {
 }
 
 main {
-  margin: auto;
   width: 100%;
-  flex: 1;
+  flex: 94%;
 }
 
 textarea {
@@ -34,6 +34,34 @@ textarea {
   font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   padding: 1em;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+textarea.dark::-webkit-scrollbar-track {
+  background: #181d29;
+  border-radius: 10px;
+}
+
+textarea.dark::-webkit-scrollbar-thumb {
+  background: #b6b6b6;
+  border-radius: 10px;
+}
+
+textarea.light::-webkit-scrollbar-track {
+  background: #c8c8c8;
+  border-radius: 10px;
+}
+
+textarea.light::-webkit-scrollbar-thumb {
+  background: #363636;
+  border-radius: 10px;
+}
+
+textarea::selection {
+  background: #b6b6b6;
 }
 
 textarea.dark {
@@ -70,13 +98,13 @@ textarea.light {
 
 .header-container {
   width: 40%;
-  margin: auto;
   padding-top: 1em;
   padding-bottom: 1em;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 1.6em auto;
   justify-content: space-between;
+  flex: 3%;
 }
 
 .site-title {
@@ -139,9 +167,9 @@ hr {
 
 .footer-container {
   width: 40%;
-  margin: auto;
   padding-top: 1em;
   padding-bottom: 1em;
+  flex: 3%;
 }
 
 .footer-text.dark {
@@ -238,4 +266,17 @@ hr {
 
 #data-text {
   display: flex;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .area-block {
+    height: 20em;
+    width: 60%;
+    margin: auto;
+  }
+
+  .operation-block {
+    justify-content: space-between;
+  }
 }
