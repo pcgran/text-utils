@@ -16,6 +16,8 @@ const OperationApplier = ({
         <option value="select-operation" disabled>select operation</option>
         <option value="uppercase">uppercase</option>
         <option value="lowercase">lowercase</option>
+        <option value="oneline">one line</option>
+        <option value="formatjson">format json</option>
       </select>
       <button id="apply-operation" className="dark" onClick={handleButtonClick}>
         Apply
