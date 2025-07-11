@@ -18,6 +18,7 @@ const OperationApplier = ({
         <option value="lowercase">lowercase</option>
         <option value="oneline">one line</option>
         <option value="formatjson">format json</option>
+        <option value="removespaces">remove spaces</option>
       </select>
       <button id="apply-operation" className="dark" onClick={handleButtonClick}>
         Apply

@@ -29,6 +29,9 @@ const TextAreaWithLength = () => {
       case "oneline":
         setText(text.replace(/\s+/g, " "));
         break;
+      case "removespaces": 
+        setText(text.trim().replace(/\s+/g, ' '));
+        break; 
       case "formatjson":
         try {
           setText(JSON.stringify(JSON.parse(text), null, 4));
