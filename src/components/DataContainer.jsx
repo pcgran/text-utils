@@ -25,7 +25,7 @@ const DataContainer = ({ text }) => {
         <div className="area-data"><span className="data-span">{calculateSencences(text)}</span> sentences</div>
       </section>
       <button id="copy-text" className="dark" onClick={copyText}>
-        Copy
+        <i className="fa-solid fa-copy dark"></i>
       </button>
     </section>
   );

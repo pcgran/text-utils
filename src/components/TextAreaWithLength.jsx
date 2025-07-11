@@ -3,7 +3,6 @@ import DataContainer from "./DataContainer";
 import UppercaseButton from "./buttons/UppercaseButton";
 import LowercaseButton from "./buttons/LowercaseButton";
 import OneLineButton from "./buttons/OneLineButton";
-import RemoveSpacesButton from "./buttons/RemoveSpacesButton";
 import FormatJsonButton from "./buttons/FormatJsonButton";
 import "../styles/App.css";
 
@@ -32,7 +31,6 @@ const TextAreaWithLength = () => {
         <UppercaseButton textAreaRef={textAreaRef} />
         <LowercaseButton textAreaRef={textAreaRef} />
         <OneLineButton textAreaRef={textAreaRef} />
-        <RemoveSpacesButton textAreaRef={textAreaRef} />
         <FormatJsonButton textAreaRef={textAreaRef} />
       </div>
     </div>

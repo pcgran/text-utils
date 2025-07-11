@@ -60,10 +60,6 @@ textarea.light::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-textarea::selection {
-  background: #b6b6b6;
-}
-
 textarea.dark {
   color: #b6b6b6;
   border-color: #b6b6b6;
@@ -74,6 +70,18 @@ textarea.light {
   color: #363636;
   border-color: black;
   background-color: #c8c8c8;
+}
+
+textarea.dark::selection {
+  background: #363636;
+}
+
+textarea.light::selection {
+  background: #b6b6b6;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 .area-block {
@@ -249,19 +257,12 @@ hr {
   color: #ff6b01;
   cursor: pointer;
   font-weight: bold;
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em; 
+  background: none;
+  border: none;
 }
 
-#copy-text.dark {
-  background-color: #181d29;
-  border: #b6b6b6 solid 1px;
-}
-
-#copy-text.light {
-  border: black solid 1px;
+#copy-text i {
+  font-size: 1.3em;
 }
 
 #data-text {
