@@ -1,11 +1,8 @@
 import "../../styles/App.css";
 
-const LowercaseButton = ({ textAreaRef }) => {
+const LowercaseButton = ({ text, setText }) => {
   const handleClick = () => {
-    if (textAreaRef.current) {
-      const currentValue = textAreaRef.current.value;
-      textAreaRef.current.value = currentValue.toLowerCase();
-    }
+    setText(text.toLowerCase());
   };
 
   return (

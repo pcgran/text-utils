@@ -19,7 +19,6 @@ const TextAreaWithLength = () => {
   return (
     <div className="area-block">
       <textarea
-        ref={textAreaRef}
         value={text}
         onChange={handleTextChange}
         placeholder="Type something..."
@@ -28,10 +27,10 @@ const TextAreaWithLength = () => {
       />
       <DataContainer text={text} />
       <div className="button-grid">        
-        <UppercaseButton textAreaRef={textAreaRef} />
-        <LowercaseButton textAreaRef={textAreaRef} />
-        <OneLineButton textAreaRef={textAreaRef} />
-        <FormatJsonButton textAreaRef={textAreaRef} />
+        <UppercaseButton text={text} setText={setText} />
+        <LowercaseButton text={text} setText={setText} />
+        <OneLineButton text={text} setText={setText} />
+        <FormatJsonButton text={text} setText={setText} />
       </div>
     </div>
   );

@@ -1,11 +1,8 @@
 import "../../styles/App.css";
 
-const UppercaseButton = ({ textAreaRef }) => {
+const UppercaseButton = ({ text, setText }) => {
   const handleClick = () => {
-    if (textAreaRef.current) {
-      const currentValue = textAreaRef.current.value;
-      textAreaRef.current.value = currentValue.toUpperCase();
-    }
+    setText(text.toUpperCase());
   };
 
   return (

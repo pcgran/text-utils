@@ -1,11 +1,8 @@
 import "../../styles/App.css";
 
-const OneLineButton = ({ textAreaRef }) => {
+const OneLineButton = ({ text, setText }) => {
   const handleClick = () => {
-    if (textAreaRef.current) {
-      const currentValue = textAreaRef.current.value;
-      textAreaRef.current.value = currentValue.replace(/\s+/g, " ");
-    }
+    setText(text.replace(/\s+/g, " "));
   };
 
   return (

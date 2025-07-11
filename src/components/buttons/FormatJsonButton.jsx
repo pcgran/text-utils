@@ -1,14 +1,11 @@
 import "../../styles/App.css";
 
-const FormatJsonButton = ({ textAreaRef }) => {
+const FormatJsonButton = ({ text, setText }) => {
   const handleClick = () => {
-    if (textAreaRef.current) {
-      const currentValue = textAreaRef.current.value;
-      try{
-        textAreaRef.current.value = JSON.stringify(JSON.parse(currentValue), null, 4);
-      } catch (error) {
-        textAreaRef.current.value = currentValue;
-      }
+    try{
+      setText(JSON.stringify(JSON.parse(text), null, 4));
+    } catch (error) {
+      setText(text);
     }
   };
 
