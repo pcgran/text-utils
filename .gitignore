@@ -5,6 +5,8 @@ dist/
 
 # Astro
 astro.config.*.local.*
+.astro/
+src/env.d.ts
 
 # Logs
 npm-debug.log*

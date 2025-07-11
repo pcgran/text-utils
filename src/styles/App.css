@@ -224,7 +224,7 @@ hr {
   border: black solid 1px;
 }
 
-#apply-operation {
+.apply-operation {
   font-size: 1em;
   color: #ff6b01;
   cursor: pointer;
@@ -235,12 +235,12 @@ hr {
   padding-bottom: 0.2em;  
 }
 
-#apply-operation.dark {
+.apply-operation.dark {
   background-color: #181d29;
   border: #b6b6b6 solid 1px;
 }
 
-#apply-operation.light {
+.apply-operation.light {
   border: black solid 1px;
 }
 
@@ -279,4 +279,11 @@ hr {
   .operation-block {
     justify-content: space-between;
   }
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }

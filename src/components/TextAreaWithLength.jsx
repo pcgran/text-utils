@@ -1,53 +1,26 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import DataContainer from "./DataContainer";
-import OperationApplier from "./OperationApplier";
+import UppercaseButton from "./buttons/UppercaseButton";
+import LowercaseButton from "./buttons/LowercaseButton";
+import OneLineButton from "./buttons/OneLineButton";
+import RemoveSpacesButton from "./buttons/RemoveSpacesButton";
+import FormatJsonButton from "./buttons/FormatJsonButton";
 import "../styles/App.css";
 
 const TextAreaWithLength = () => {
   const [text, setText] = useState("");
-  const [selectedValue, setSelectedValue] = useState('select-operation');
-
-  const handleValueChange = (value) => {
-    setSelectedValue(value);
-  };
 
   const handleTextChange = (event) => {
     const newText = event.target.value;
     setText(newText);
   };
-
-  const handleButtonClick = () => {
-    switch (selectedValue) {
-      case "select-operation":
-        return;
-      case "uppercase":
-        setText(text.toUpperCase());
-        break;
-      case "lowercase":
-        setText(text.toLowerCase());
-        break;
-      case "oneline":
-        setText(text.replace(/\s+/g, " "));
-        break;
-      case "removespaces": 
-        setText(text.trim().replace(/\s+/g, ' '));
-        break; 
-      case "formatjson":
-        try {
-          setText(JSON.stringify(JSON.parse(text), null, 4));
-        } catch (error) {
-          setText(text);
-        }
-        break;
-      default:
-        break;
-    }
-  };
   
+  const textAreaRef = useRef(null);
 
   return (
     <div className="area-block">
       <textarea
+        ref={textAreaRef}
         value={text}
         onChange={handleTextChange}
         placeholder="Type something..."
@@ -55,7 +28,13 @@ const TextAreaWithLength = () => {
         spellcheck="false"
       />
       <DataContainer text={text} />
-      <OperationApplier handleButtonClick={handleButtonClick} selectedValue={selectedValue} onValueChange={handleValueChange}/>
+      <div className="button-grid">        
+        <UppercaseButton textAreaRef={textAreaRef} />
+        <LowercaseButton textAreaRef={textAreaRef} />
+        <OneLineButton textAreaRef={textAreaRef} />
+        <RemoveSpacesButton textAreaRef={textAreaRef} />
+        <FormatJsonButton textAreaRef={textAreaRef} />
+      </div>
     </div>
   );
 };
